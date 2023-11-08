@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat|Nunito|Poppins|Roboto+Condensed&display=swap"> 
+  <script src="js/scripts.js" defer></script> <!-- Link to js file -->
+  <title>New Zealand Weather</title> <!-- Title at top of browser -->
+
+</head>
+
+<body>
+  <nav class="top-nav bar"> <!-- Top nav bar with weather logo -->
+    <img src="images/logo.png" alt="Logo"> <!-- Logo image -->
+  </nav>
+
+  <div class="container">
+    <header class="main-header"> <!-- Start of forecast header -->
+      <h1>The Forecast</h1>
+    </header>
+    <nav class="search-bar"> <!-- Navigation -->
+      <a href="#">About</a>
+      <!-- Empty Link! If you wish to put links to another page for further development place your link within the double quotes after href -->
+      <a href="#">Terms</a>
+      <!-- Empty Link! If you wish to put links to another page for further development place your link within the double quotes after href -->
+
+      <select id="locationSelector"> <!-- Location Selector -->
+        <option value="Auckland">Auckland</option>
+        <option value="Christchurch">Christchurch</option>
+        <option value="Wellington">Wellington</option>
+        <option value="Hamilton">Hamilton</option>
+        <option value="Tauranga">Tauranga</option>
+        <option value="Napier">Napier</option>
+        <option value="Dunedin">Dunedin</option>
+        <option value="Palmerston North" selected>Palmerston North</option> <!-- Default selected city -->
+        <option value="Nelson">Nelson</option>
+        <option value="Rotorua">Rotorua</option>
+        <option value="New Plymouth">New Plymouth</option>
+        <option value="Whangarei">Whangarei</option>
+        <option value="Invercargill">Invercargill</option>
+        <option value="Whanganui">Whanganui</option>
+        <option value="Gisborne">Gisborne</option>
+        <option value="Timaru">Timaru</option>
+        <option value="Blenheim">Blenheim</option>
+        <option value="Taupo">Taupo</option>
+        <option value="Masterton">Masterton</option>
+        <option value="Ashburton">Ashburton</option>
+      </select>
+
+    </nav>
+    <section class="main-outter-wrapper"> <!-- Parent width -->
+      <section class="top-outter-wrapper-left"> <!-- Start of Content Section -->
+        <header class="bar border content-header"> 
+          <h4>Content</h4>
+        </header>
+        <div class="content-img"> 
+          <img id="weatherImage" src="" alt="Weather Icon"> <!-- Js will fill this -->
+        </div>
+
+        <div class="content-main">
+          <p>Weather influences our daily activities. Sunny days bring joy and outdoor fun, while stormy days force
+            peopleindoors, highlighting weather's volatile nature.</p> <!-- Weather text -->
+        </div>
+
+      </section> <!-- End of content section -->
+
+      <section class="top-outter-wrapper-right"> <!-- Start of Currently Section -->
+        <header class="bar border">
+          <h4>Currently</h4> <!-- Currently Header -->
+        </header>
+
+        <div id="weatherdata" class="content-currently">
+          <ul> <!-- Js will fill each li element -->
+            <li>Country: </li>
+            <li>City: </li>
+            <li>Temperature: </li>
+            <li>Description: </li>
+            <li>Wind Speed: </li>
+          </ul>
+        </div>
+      </section> <!-- End of Currently Seciton -->
+
+      <section class="bottom-outer-wrapper-left"> <!-- Start Of Forecast Section -->
+        <header class="bar border header-forecasts">
+          <h4>Forecasts</h4>
+        </header>
+        <div id="forecast" class="forecast-cards-container"> 
+        <div class="weather-card">
+          <!-- Js will inject cards here -->
+        </div>
+      </div>
+      </section> <!-- End Of Forecast Section -->
+
+      <section class="bottom-outer-wrapper-right"> <!-- Start Of Map Section -->
+        <header class="bar border header-map">
+          <h4>Map</h4>
+        </header>
+        <div id="map" class="map-container">
+          <div class="map">
+            
+          </div>
+          <!-- Js will inject map here -->
+        </div>
+      </section> <!-- End Of Map Section -->
+    </section>
+    <footer class="bar">
+      <p>&copy; Martyn Orchard 2023</p>
+    </footer>
+  </div>
+</body>
+</html>
