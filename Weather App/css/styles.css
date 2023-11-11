@@ -97,6 +97,17 @@ select {
   "sidebar footer";
 }
 
+.top-outter-wrapper-right {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.content-img img,
+.content-main p:first-child,
+.content-currently ul li:first-child {
+  align-self: start;
+}
+
 .content-img {
   border: 1rem solid #eeeeee;
   grid-area: sidebar;
@@ -110,10 +121,14 @@ select {
   line-height: 2rem;
 }
 
+.content-currently ul li {
+  margin: 0;
+  padding: 0;
+}
+
 .content-main {
   border: 1rem solid #eeeeee;
   grid-area: footer;
-  line-height: 2rem;
   padding: 1rem;
 }
 
