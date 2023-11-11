@@ -22,8 +22,8 @@
   </nav>
 
   <div class="container">
-    <header class="main-header"> <!-- Start of forecast header -->
-      <h1>The Forecast</h1>
+    <header class="main-header"> 
+      <h1>The Forecast</h1> 
     </header>
     <nav class="search-bar"> <!-- Navigation -->
       <a href="#">About</a>
@@ -31,7 +31,8 @@
       <a href="#">Terms</a>
       <!-- Empty Link! If you wish to put links to another page for further development place your link within the double quotes after href -->
 
-      <select id="locationSelector"> <!-- Location Selector -->
+      <!-- Selector Options -->
+      <select id="locationSelector"> <!-- Location Selector (js) -->
         <option value="Auckland">Auckland</option>
         <option value="Christchurch">Christchurch</option>
         <option value="Wellington">Wellington</option>
@@ -55,16 +56,16 @@
       </select>
 
     </nav>
-    <section class="main-outter-wrapper"> <!-- Parent width -->
+    <section class="main-outter-wrapper"> <!-- Start of main outter wrapper -->
       <section class="top-outter-wrapper-left"> <!-- Start of Content Section -->
         <header class="bar border content-header">
-          <h4>Content</h4>
+          <h4>Content</h4> <!-- Content Header -->
         </header>
-        <div class="content-img">
+        <div class="content-img"> <!-- Content image -->
           <img id="weatherImage" src="" alt="Weather Icon"> <!-- Js will fill this -->
         </div>
 
-        <div class="content-main">
+        <div class="content-main"> <!-- Content text -->
           <p>Weather influences our daily activities. Sunny days bring joy and outdoor fun, while stormy days force
             peopleindoors, highlighting weather's volatile nature.</p> <!-- Weather text -->
         </div>
@@ -110,10 +111,14 @@
           </div>
         </div>
       </section> <!-- End Of Map Section -->
-    </section>
+
+    </section> <!-- End Of Main Outter Wrapper  -->
+
+    <!-- Start Of Footer Section -->
     <footer class="bar">
       <p>&copy; Martyn Orchard 2023</p>
     </footer>
+    <!-- End Of Footer Section -->
   </div>
 </body>
 
