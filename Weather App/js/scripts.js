@@ -3,13 +3,14 @@ let map = null;
 let output;
 
 function fetchCurrentWeatherData() {
-  let location = document.getElementById("locationSelector").value;
+  let location = document.getElementById("locationSelector").value; 
 
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`
   )
     .then((response) => response.json())
     .then((data) => {
+      // Get the latitude and longitude from the API response
       latitude = data.coord.lat;
       longitude = data.coord.lon;
 
@@ -25,20 +26,21 @@ function fetchCurrentWeatherData() {
       updateWeatherAndMap(data);
     })
     .catch((error) => {
-      console.error("Error fetching current weather data", error);
+      console.error("Error fetching current weather data", error); // Error Message
     });
 }
 
 function fetchWeatherForecastData() {
-  let location = document.getElementById("locationSelector").value;
+  let location = document.getElementById("locationSelector").value; // Get the location from the location selector
+
   fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}` // Fetch the weather forecast data
   )
-    .then((response) => response.json())
+    .then((response) => response.json()) // Convert the response to JSON
     .then((data) => {
       let noonForecasts = data.list.filter((item) => {
         let date = new Date(item.dt * 1000);
-        return date.getUTCHours() === 12;
+        return date.getUTCHours() === 12; // Filter the forecasts to only include noon forecasts
       });
 
       let output = ""; // Initialize the output
@@ -54,6 +56,7 @@ function fetchWeatherForecastData() {
       ];
 
       for (let i = 0; i < noonForecasts.length && i < 5; i++) {
+        // Loop through the noon forecasts
         let date = new Date(noonForecasts[i].dt * 1000);
         let dayName = days[date.getUTCDay()];
         let weatherIcon = noonForecasts[i].weather[0].icon;
@@ -79,7 +82,7 @@ function fetchWeatherForecastData() {
         output += "</div>";
       }
 
-      document.getElementById("forecast").innerHTML = output;
+      document.getElementById("forecast").innerHTML = output; // Creates Forecasts cards
     })
     .catch((error) => {
       console.error("Error fetching weather forecast data", error);
