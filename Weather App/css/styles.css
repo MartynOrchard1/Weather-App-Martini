@@ -130,12 +130,14 @@ select {
 .content-currently ul li {
   margin: 0;
   padding: 0;
+  padding-top: 0.1rem;
 }
 
 .content-main {
   border: 1rem solid #eeeeee;
   grid-area: footer;
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-top: 0.6rem;
 }
 
 .content-header {
@@ -159,7 +161,6 @@ ul {
 .weather-card {
   background-color: #bdd7e9;
   border: 1px solid rgb(150, 150, 182);
-  ;
   border-radius: 0.5rem (8px);
   padding: 1rem;
   margin: 10px;
@@ -183,7 +184,7 @@ ul {
 
 .map {
   border: 1rem solid #eeeeee;
-  height: 363px;
+  height: 364px;
 }
 
 .map-container {
