@@ -10,7 +10,7 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat|Nunito|Poppins|Roboto+Condensed&display=swap"> 
+    href="https://fonts.googleapis.com/css?family=Exo+2|Montserrat|Nunito|Poppins|Roboto+Condensed&display=swap">
   <script src="js/scripts.js" defer></script> <!-- Link to js file -->
   <title>New Zealand Weather</title> <!-- Title at top of browser -->
 
@@ -57,10 +57,10 @@
     </nav>
     <section class="main-outter-wrapper"> <!-- Parent width -->
       <section class="top-outter-wrapper-left"> <!-- Start of Content Section -->
-        <header class="bar border content-header"> 
+        <header class="bar border content-header">
           <h4>Content</h4>
         </header>
-        <div class="content-img"> 
+        <div class="content-img">
           <img id="weatherImage" src="" alt="Weather Icon"> <!-- Js will fill this -->
         </div>
 
@@ -91,11 +91,11 @@
         <header class="bar border header-forecasts">
           <h4>Forecasts</h4>
         </header>
-        <div id="forecast" class="forecast-cards-container"> 
-        <div class="weather-card">
-          <!-- Js will inject cards here -->
+        <div id="forecast" class="forecast-cards-container">
+          <div class="weather-card">
+            <!-- Js will inject cards here -->
+          </div>
         </div>
-      </div>
       </section> <!-- End Of Forecast Section -->
 
       <section class="bottom-outer-wrapper-right"> <!-- Start Of Map Section -->
@@ -103,13 +103,12 @@
           <h4>Map</h4>
         </header>
         <div class="map">
-        <div id="map" class="map-container">
-          <div class="map">
-            
+          <div id="map" class="map-container">
+            <div class="map">
+            </div>
+            <!-- Js will inject map here -->
           </div>
-          <!-- Js will inject map here -->
         </div>
-      </div>
       </section> <!-- End Of Map Section -->
     </section>
     <footer class="bar">
@@ -117,4 +116,5 @@
     </footer>
   </div>
 </body>
+
 </html>

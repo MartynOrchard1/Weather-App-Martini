@@ -6,8 +6,10 @@
 }
 
 a {
-  padding-right: 1rem; /* Padding between 'About' & 'Terms' */
-  text-decoration: none; /* Remove underline from links */
+  padding-right: 1rem;
+  /* Padding between 'About' & 'Terms' */
+  text-decoration: none;
+  /* Remove underline from links */
 }
 
 img {
@@ -28,7 +30,8 @@ img {
   background-color: rgb(150, 150, 182);
   color: #ffffff;
   display: flex;
-  align-items: center; /* Vertically centers text */
+  align-items: center;
+  /* Vertically centers text */
   padding-left: 1rem;
 }
 
@@ -44,13 +47,16 @@ img {
 }
 
 .main-header {
-  display: flex; 
+  display: flex;
   width: 100%;
-  background-image: url("../images/header.jpg"); /* sets background image */
-  background-size: cover; 
-  background-position: center; /* Centers image within 'main-header' */
+  background-image: url("../images/header.jpg");
+  /* sets background image */
+  background-size: cover;
+  background-position: center;
+  /* Centers image within 'main-header' */
   padding-left: 1rem;
-  align-items: center; /* Vertically Centers */
+  align-items: center;
+  /* Vertically Centers */
 }
 
 .header-c {
@@ -89,12 +95,12 @@ select {
   grid-gap: 1rem;
 }
 
-.top-outter-wrapper-left  {
+.top-outter-wrapper-left {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
-  "head head"
-  "sidebar footer";
+  grid-template-areas:
+    "head head"
+    "sidebar footer";
 }
 
 .top-outter-wrapper-right {
@@ -152,7 +158,8 @@ ul {
 
 .weather-card {
   background-color: #bdd7e9;
-  border: 1px solid rgb(150, 150, 182);;
+  border: 1px solid rgb(150, 150, 182);
+  ;
   border-radius: 0.5rem (8px);
   padding: 1rem;
   margin: 10px;
@@ -194,6 +201,6 @@ footer {
   margin-top: 1rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
-  width: 100%; 
+  width: 100%;
   color: #eeeeee;
 }
