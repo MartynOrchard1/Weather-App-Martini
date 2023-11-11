@@ -60,15 +60,20 @@ function fetchWeatherForecastData() {
 
         // Open a new weather card div for each forecast
         output += '<div class="weather-card">';
+        output += '<div class="day-weather">'; // Open a new div for day and weather icon
+
+        // Display the day name
         output += `<h4>${dayName} Noon</h4>`;
 
         // Display the weather icon
         const weatherIconUrl = `https://openweathermap.org/img/w/${weatherIcon}.png`;
         output += `<img src="${weatherIconUrl}" alt="weather icon" class="weather-icon">`;
 
+        output += "</div>"; // Close the day-weather div
+
         let tempCelsius = (noonForecasts[i].main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
-        output += `Temperature: ${tempCelsius} °C <br>`;
-        output += `Wind Speed: ${noonForecasts[i].wind.speed} m/s`;
+        output += `${tempCelsius} °C <br>`; // Temperature
+        output += `${noonForecasts[i].wind.speed} m/s`; // Wind Speed
 
         // Close the weather card div
         output += "</div>";
