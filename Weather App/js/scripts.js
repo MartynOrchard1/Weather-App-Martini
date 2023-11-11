@@ -28,23 +28,6 @@ function fetchCurrentWeatherData() {
 
 }
 
-function getNext5DaysForecast(forecastData) {
-    const today = new Date();
-    const next5Days = [];
-
-    forecastData.forEach(forecast => {
-        const forecastDate = new Date(forecast.dt * 1000);
-
-        if (
-            forecastDate >= today &&
-            next5Days.length < 5
-        ) {
-            next5Days.push(forecast);
-        }
-    });
-
-    return next5Days;
-}
 
 function fetchWeatherForecastData() {
     let location = document.getElementById("locationSelector").value;
@@ -88,10 +71,8 @@ function fetchWeatherForecastData() {
         });
 }
 
-
-
-
 function updateWeatherImage(description) {
+    // Updat the weather image based on the weather description
     let imageElement = document.getElementById("weatherImage");
 
     if (description.includes('rain')) {
@@ -104,7 +85,7 @@ function updateWeatherImage(description) {
 }
 
 function updateWeatherAndMap(data) {
-    const currentlyList = document.getElementById("weatherdata"); // Select the parent div
+    const currentlyList = document.getElementById("weatherdata"); 
 
     // Update current weather information
     const temperatureCelsius = (data.main.temp - 273.15).toFixed(2); // Convert from kelvin to celsius
