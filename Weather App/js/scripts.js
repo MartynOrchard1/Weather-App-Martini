@@ -95,11 +95,11 @@ function updateWeatherImage(description) {
     let imageElement = document.getElementById("weatherImage");
 
     if (description.includes('rain')) {
-        imageElement.src = "../images/weather/rain.jpg";
+        imageElement.src = "./images/weather/rain.jpg";
     } else if (description.includes('clear')) {
-        imageElement.src = "../images/weather/sun.jpg";
+        imageElement.src = "./images/weather/sun.jpg";
     } else if (description.includes('cloud')) {
-        imageElement.src = "../images/weather/cloud.jpg";
+        imageElement.src = "./images/weather/cloud.jpg";
     } // More conditions for snow etc can be added below
 }
 
