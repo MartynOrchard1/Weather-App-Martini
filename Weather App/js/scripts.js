@@ -1,4 +1,4 @@
-const apiKey = "c47d5955ac75a3b8ba4e2fdd705a0fe5";
+const apiKey = "c47d5955ac75a3b8ba4e2fdd705a0fe5"; // Api key from openweatherapi.org
 let map = null;
 let output;
 
@@ -27,7 +27,6 @@ function fetchCurrentWeatherData() {
         });
 
 }
-
 
 function fetchWeatherForecastData() {
     let location = document.getElementById("locationSelector").value;
