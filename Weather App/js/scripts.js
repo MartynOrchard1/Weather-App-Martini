@@ -92,9 +92,10 @@ function fetchWeatherForecastData() {
 }
 
 function updateWeatherImage(description) {
-  // Updat the weather image based on the weather description
-  let imageElement = document.getElementById("weatherImage");
 
+  let imageElement = document.getElementById("weatherImage");
+   
+  // Update the weather image based on the weather description
   if (description.includes("rain")) {
     imageElement.src = "./images/weather/rain.jpg";
   } else if (description.includes("clear")) {
@@ -110,7 +111,8 @@ function updateWeatherAndMap(data) {
   // Update current weather information
   const temperatureCelsius = (data.main.temp - 273.15).toFixed(2); // Convert from kelvin to celsius
 
-  currentlyList.innerHTML = `
+  // Update Currently List to real time weather data in chosen city
+  currentlyList.innerHTML = ` 
         <ul>
             <li>Country: ${data.sys.country}</li>
             <li>City: ${data.name}</li>
