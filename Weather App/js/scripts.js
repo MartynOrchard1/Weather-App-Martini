@@ -45,6 +45,7 @@ function fetchWeatherForecastData() {
 
       let output = ""; // Initialize the output
 
+      // Days Array
       let days = [
         "Sunday",
         "Monday",
@@ -78,7 +79,7 @@ function fetchWeatherForecastData() {
         output += `${tempCelsius} °C <br>`; // Temperature
         output += `${noonForecasts[i].weather[0].description} <br>`; // Description
 
-        // output += `${noonForecasts[i].wind.speed} m/s`; Wind Speed !! If you want wind speed to display ucomment this line !!
+        // output += `${noonForecasts[i].wind.speed} m/s`; Wind Speed !! If you want wind speed to display un-comment this line !!
 
         // Close the weather card div
         output += "</div>";
