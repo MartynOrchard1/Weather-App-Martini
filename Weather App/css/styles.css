@@ -137,7 +137,7 @@ select {
   border: 1rem solid #eeeeee;
   grid-area: footer;
   padding: 0.5rem;
-  padding-top: 0.6rem;
+  line-height: 2rem;
 }
 
 .content-header {
