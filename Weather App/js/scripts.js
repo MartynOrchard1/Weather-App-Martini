@@ -36,7 +36,7 @@ function fetchWeatherForecastData() {
   fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}` // Fetch the weather forecast data
   )
-    .then((response) => response.json()) // Convert the response to JSON
+    .then((response) => response.json()) 
     .then((data) => {
       let noonForecasts = data.list.filter((item) => {
         let date = new Date(item.dt * 1000);
@@ -63,7 +63,7 @@ function fetchWeatherForecastData() {
 
         // Open a new weather card div for each forecast
         output += '<div class="weather-card">';
-        output += '<div class="day-weather">'; // Open a new div for day and weather icon
+        output += '<div class="day-weather">'; // Open a new div for weather icon
 
         // Display the day name
         output += `<h4>${dayName} Noon</h4>`;
@@ -76,7 +76,9 @@ function fetchWeatherForecastData() {
 
         let tempCelsius = (noonForecasts[i].main.temp - 273.15).toFixed(2); // Convert from Kelvin to Celsius
         output += `${tempCelsius} °C <br>`; // Temperature
-        output += `${noonForecasts[i].wind.speed} m/s`; // Wind Speed
+        output += `${noonForecasts[i].weather[0].description} <br>`; // Description
+
+        // output += `${noonForecasts[i].wind.speed} m/s`; Wind Speed !! If you want wind speed to display ucomment this line !!
 
         // Close the weather card div
         output += "</div>";
